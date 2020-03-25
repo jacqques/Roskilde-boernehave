@@ -39,6 +39,14 @@ public class Kid {
         return name.replaceAll(" ", "_") + " " + parent1Name.replaceAll(" ", "_") + " " + parent1Number + " " + parent2Name.replaceAll(" ", "_") + " " + parent2Number + " " + accepted;
     }
 
+    public String getParent1Name() {
+        return parent1Name;
+    }
+
+    public String getParent2Name() {
+        return parent2Name;
+    }
+
     @Override
     public String toString() {
         return "Kid{" +
