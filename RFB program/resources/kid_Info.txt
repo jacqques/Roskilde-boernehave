@@ -1,0 +1,5 @@
+1 Pickle_Rick Jerry 666 Birdperson 69
+2 Peter_Parker Uncle_Ben 12378945 Aunt_May 0
+3 Alex_Ander Bente_Ander 12345698 null 0
+4 Hej med 123 dig 654
+5 Bill_Gates Billy_The_Kid 58264106 Bille_August 91100112

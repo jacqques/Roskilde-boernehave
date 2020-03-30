@@ -1,0 +1,4 @@
+Pickle_Rick Jerry 666 Birdperson 69
+Peter_Parker Uncle_Ben 12378945 Aunt_May 0
+Alex_Ander Bente_Ander 12345698 null 0
+Nellie_Dellie Cookie_Dough 21071995 null 0
