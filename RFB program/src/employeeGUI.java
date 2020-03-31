@@ -7,7 +7,8 @@ public class employeeGUI extends JFrame {
     private JPanel panel1;
     private JButton viewWaitingButton;
 
-    MainInterface methods = new MainInterface();
+    public static JFrame displayInfoGUI = new showInfo("View information");
+    public static JFrame displayWait = new viewWaitingList("View waiting list");
 
     public employeeGUI(String title){
         super(title);
@@ -19,14 +20,16 @@ public class employeeGUI extends JFrame {
         viewInformationButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                methods.viewInformation();
+                displayInfoGUI.setExtendedState(JFrame.MAXIMIZED_BOTH);
+                displayInfoGUI.setVisible(true);
             }
         });
 
         viewWaitingButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                methods.viewWaitingList();
+                displayWait.setExtendedState(JFrame.MAXIMIZED_BOTH);
+                displayWait.setVisible(true);
             }
         });
     }

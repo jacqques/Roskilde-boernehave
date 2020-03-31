@@ -1,5 +1,4 @@
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -16,8 +15,17 @@ public class managerGUI extends JFrame {
     private JButton removeEmpButton;
     private JButton addEmpButton;
 
-    MainInterface methods = new MainInterface();
+    public static JFrame displayInfoGUI = new showInfo("View information");
+    public static JFrame displayWait = new viewWaitingList("View waiting list");
+    public static JFrame chooseEditKid = new chooseKidEdit("Choose kid to edit");
+    public static JFrame chooseEditEmp = new editEmpInfo("Choose employee to edit");
+    public static JFrame chooseEditWait = new editWaitInfo("Choose kid to edit");
+    public static JFrame removeKidFrame = new removeKid("Choose kid to remove");
+    public static JFrame removeEmpFrame = new removeEmployee("Choose employee to remove");
+    public static JFrame addKidFrame = new addKidToWait("Add kid to waiting list");
+    public static JFrame addEmpFrame = new addEmp("Add employee");
 
+    MainInterface methods = new MainInterface();
 
     public managerGUI(String title){
         super(title);
@@ -34,7 +42,8 @@ public class managerGUI extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    methods.viewInformation();
+                    displayInfoGUI.setExtendedState(JFrame.MAXIMIZED_BOTH);
+                    displayInfoGUI.setVisible(true);
                 } catch (Exception ex) {
                     JOptionPane.showMessageDialog(null, "Something went wrong.");
                 }
@@ -45,7 +54,8 @@ public class managerGUI extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    methods.editKidInfo();
+                    chooseEditKid.setExtendedState(JFrame.MAXIMIZED_BOTH);
+                    chooseEditKid.setVisible(true);
                 } catch (Exception ex) {
                     JOptionPane.showMessageDialog(null, "Something went wrong.");
                 }
@@ -56,7 +66,8 @@ public class managerGUI extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    methods.editEmpInfo();
+                    chooseEditEmp.setExtendedState(JFrame.MAXIMIZED_BOTH);
+                    chooseEditEmp.setVisible(true);
                 } catch (Exception ex) {
                     JOptionPane.showMessageDialog(null, "Something went wrong.");
                 }
@@ -67,7 +78,8 @@ public class managerGUI extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    methods.viewWaitingList();
+                    displayWait.setExtendedState(JFrame.MAXIMIZED_BOTH);
+                    displayWait.setVisible(true);
                 } catch (Exception ex) {
                     JOptionPane.showMessageDialog(null, "Something went wrong.");
                 }
@@ -78,7 +90,8 @@ public class managerGUI extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    methods.editWaitingList();
+                    chooseEditWait.setExtendedState(JFrame.MAXIMIZED_BOTH);
+                    chooseEditWait.setVisible(true);
                 } catch (Exception ex) {
                     JOptionPane.showMessageDialog(null, "Something went wrong.");
                 }
@@ -88,14 +101,16 @@ public class managerGUI extends JFrame {
         addKidButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                methods.addKid();
+                addKidFrame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+                addKidFrame.setVisible(true);
             }
         });
 
         addEmpButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                methods.addEmp();
+                addEmpFrame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+                addEmpFrame.setVisible(true);
             }
         });
 
@@ -103,7 +118,8 @@ public class managerGUI extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    methods.removeKid();
+                    removeKidFrame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+                    removeKidFrame.setVisible(true);
                 } catch (Exception ex) {
                     JOptionPane.showMessageDialog(null, "Something went wrong.");
                 }
@@ -114,7 +130,8 @@ public class managerGUI extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    methods.removeEmployee();
+                    removeEmpFrame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+                    removeEmpFrame.setVisible(true);
                 } catch (Exception ex) {
                     JOptionPane.showMessageDialog(null, "Something went wrong.");
                 }

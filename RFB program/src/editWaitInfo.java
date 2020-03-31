@@ -102,6 +102,9 @@ public class editWaitInfo extends JFrame {
                 } catch (HeadlessException ex) {
                     JOptionPane.showMessageDialog(null, "Not a valid input, try again.");
                     parent2NumField.setText("");
+                } catch (IndexOutOfBoundsException ex) {
+                    JOptionPane.showMessageDialog(null, "Not a valid input, try again.");
+                    parent2NumField.setText("");
                 }
             }
         });

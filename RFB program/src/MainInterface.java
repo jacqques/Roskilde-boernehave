@@ -12,15 +12,6 @@ public class MainInterface {
 
     public static JFrame manGUI = new managerGUI("Manager menu");
     public static JFrame empGUI = new employeeGUI("Employee menu");
-    public static JFrame displayInfoGUI = new showInfo("View information");
-    public static JFrame displayWait = new viewWaitingList("View waiting list");
-    public static JFrame chooseEditKid = new chooseKidEdit("Choose kid to edit");
-    public static JFrame chooseEditEmp = new editEmpInfo("Choose employee to edit");
-    public static JFrame chooseEditWait = new editWaitInfo("Choose kid to edit");
-    public static JFrame removeKidFrame = new removeKid("Choose kid to remove");
-    public static JFrame removeEmpFrame = new removeEmployee("Choose employee to remove");
-    public static JFrame addKidFrame = new addKidToWait("Add kid to waiting list");
-    public static JFrame addEmpFrame = new addEmp("Add employee");
 
     public static void load(){
         try{
@@ -164,51 +155,6 @@ public class MainInterface {
         }
     }
 
-    public static void viewWaitingList(){
-        displayWait.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        displayWait.setVisible(true);
-    }
-
-    public static void editWaitingList() {
-        chooseEditWait.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        chooseEditWait.setVisible(true);
-    }
-
-    public static void viewInformation(){
-        displayInfoGUI.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        displayInfoGUI.setVisible(true);
-    }
-
-    public static void editKidInfo() {
-        chooseEditKid.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        chooseEditKid.setVisible(true);
-    }
-
-    public static void editEmpInfo(){
-        chooseEditEmp.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        chooseEditEmp.setVisible(true);
-    }
-
-    public static void addKid(){
-        addKidFrame.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        addKidFrame.setVisible(true);
-    }
-
-    public static void addEmp(){
-        addEmpFrame.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        addEmpFrame.setVisible(true);
-    }
-
-    public static void removeKid(){
-        removeKidFrame.setExtendedState(JFrame.MAXIMIZED_BOTH);;
-        removeKidFrame.setVisible(true);
-    }
-
-    public static void removeEmployee(){
-        removeEmpFrame.setExtendedState(JFrame.MAXIMIZED_BOTH);
-       removeEmpFrame.setVisible(true);
-    }
-
     public static ArrayList<Kid> getKidList() {
         return kidList;
     }
@@ -220,5 +166,4 @@ public class MainInterface {
     public static ArrayList<Kid> getWaitingList() {
         return waitingList;
     }
-
 }

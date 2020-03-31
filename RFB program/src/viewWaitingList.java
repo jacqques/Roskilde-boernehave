@@ -4,10 +4,10 @@ import java.awt.event.ActionListener;
 
 public class viewWaitingList extends JFrame {
     static MainInterface methods = new MainInterface();
-    private static JPanel watingListPanel;
-    private static JTextArea showWait;
-    private static JButton refreshButton;
-    private static String tempStr = "";
+    private JPanel watingListPanel;
+    private JTextArea showWait;
+    private JButton refreshButton;
+    private String tempStr = "";
 
     public viewWaitingList(String title){
         super(title);
